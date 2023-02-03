@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Joke from './Joke';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Joke
+      setup="why did chicken"
+      punchl="chicken boy"
+      isPun={true}
+      laughs={113}/>
+      
+      <Joke
+      setup="why did cow"
+      punchl="cow boy"
+      isPun={true}
+      laughs={131}/>
+      <Joke
+      setup="why did cat"
+      punchl="chicken cat"
+      isPun={true}
+      laughs={13}/>
+      <Joke
+      setup="why did duck"
+      punchl="chicken duck"
+      isPun={true}
+      laughs={23}/>
+      <Joke
+      setup="why did dog"
+      punchl="chicken dog"
+      isPun={true}
+      laughs={33}/>
     </div>
   );
 }
