@@ -1,11 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 import Joke from './Joke';
+import jokesData from './jokesData';
 
 function App() {
+  const jokeElements = jokesData.map(joke => 
+        <Joke  setup={joke.setup}
+        punchl={joke.punchline}/>
+    )
+
   return (
     <div>
-      <Joke
+      {jokeElements}
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+// below is what was there before using jokesData
+
+{/* <Joke
       setup="why did chicken"
       punchl="chicken boy"
       isPun={true}
@@ -30,9 +47,4 @@ function App() {
       setup="why did dog"
       punchl="chicken dog"
       isPun={true}
-      laughs={33}/>
-    </div>
-  );
-}
-
-export default App;
+      laughs={33}/> */}
